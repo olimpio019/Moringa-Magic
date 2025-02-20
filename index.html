@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moringa Magic - Natural Benefits</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #2c7a2c;
+            color: white;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c7a2c;
+        }
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            display: inline-block;
+            background: #ff9800;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #e68900;
+        }
+        footer {
+            background: #2c7a2c;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .cookie-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            text-align: center;
+            display: none;
+        }
+        .cookie-popup .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            display: none;
+        }
+        .cookie-popup button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .accept {
+            background: #4CAF50;
+            color: white;
+        }
+        .decline {
+            background: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    <div class="cookie-popup" id="cookiePopup">
+        <button class="close-btn" onclick="closePopup()">✖</button>
+        <p>We use cookies to improve your experience. Accept or decline to continue.</p>
+        <button class="accept" onclick="redirectToAffiliate()">Accept</button>
+        <button class="decline" onclick="redirectToAffiliate()">Decline</button>
+    </div>
+
+    <header>
+        <h1>Discover the Power of Moringa Magic</h1>
+        <p>The natural superfood that boosts your health and well-being!</p>
+    </header>
+    
+    <section id="benefits">
+        <h2>Why Choose Moringa Magic?</h2>
+        <ul>
+            <li>✅ Naturally boosts energy</li>
+            <li>✅ Strengthens the immune system</li>
+            <li>✅ Rich in essential vitamins and minerals</li>
+            <li>✅ 100% natural and safe</li>
+        </ul>
+    </section>
+    
+    <section id="testimonials">
+        <h2>What Our Customers Say?</h2>
+        <p>"Moringa Magic changed my life! I feel more energetic and healthier." - John M.</p>
+    </section>
+    
+    <section id="cta">
+        <h2>Get Yours Now!</h2>
+        <p>Take advantage of this special offer and transform your health today.</p>
+        <a href="https://www.officialmoringamagic.com/#aff=heloStore" class="button">Buy Now</a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Moringa Magic. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function redirectToAffiliate() {
+            window.location.href = "https://www.officialmoringamagic.com/#aff=heloStore";
+        }
+        function closePopup() {
+            document.getElementById('cookiePopup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('cookiePopup').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block';
+            }, 5000);
+        };
+    </script>
+</body>
+</html>
